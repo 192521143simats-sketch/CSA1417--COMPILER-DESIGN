@@ -1,0 +1,32 @@
+
+#include <stdio.h>
+
+int main() {
+    char firstS[10];
+    int count = 0;
+
+    /* A and B produce epsilon */
+    int A_epsilon = 1;
+    int B_epsilon = 1;
+
+    /* S -> AaAb */
+    if (A_epsilon)
+        firstS[count++] = 'a';
+
+    /* S -> BbBa */
+    if (B_epsilon)
+        firstS[count++] = 'b';
+
+    printf("FIRST(A) = { epsilon }\n");
+    printf("FIRST(B) = { epsilon }\n");
+
+    printf("FIRST(S) = { ");
+    for (int i = 0; i < count; i++) {
+        printf("%c", firstS[i]);
+        if (i < count - 1)
+            printf(", ");
+    }
+    printf(" }\n");
+
+    return 0;
+}
