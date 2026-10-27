@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char nonTerminal = 'L';
+    char production1[] = "L,S";
+    char production2[] = "S";
+
+    char alpha[20], beta[20];
+    int i;
+
+    /* Check whether production1 is left-recursive */
+    if (production1[0] == nonTerminal) {
+        strcpy(alpha, production1 + 1);
+        strcpy(beta, production2);
+
+        printf("Grammar after eliminating left recursion:\n");
+        printf("S  -> (L) | a\n");
+        printf("%c  -> %s %c'\n", nonTerminal, beta, nonTerminal);
+        printf("%c' -> %s %c' | epsilon\n",
+               nonTerminal, alpha, nonTerminal);
+    } else {
+        printf("No left recursion found.\n");
+    }
+
+    return 0;
+}
