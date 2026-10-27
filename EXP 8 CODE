@@ -1,0 +1,41 @@
+
+#include <stdio.h>
+
+int main() {
+    char followA[10], followB[10], followS[10];
+    int countA = 0, countB = 0, countS = 0;
+
+    /* S is the start symbol */
+    followS[countS++] = '$';
+
+    /* S -> A a A b */
+    followA[countA++] = 'a';
+    followA[countA++] = 'b';
+
+    /* S -> B b B a */
+    followB[countB++] = 'b';
+    followB[countB++] = 'a';
+
+    printf("FOLLOW(S) = { ");
+    for (int i = 0; i < countS; i++)
+        printf("%c", followS[i]);
+    printf(" }\n");
+
+    printf("FOLLOW(A) = { ");
+    for (int i = 0; i < countA; i++) {
+        printf("%c", followA[i]);
+        if (i < countA - 1)
+            printf(", ");
+    }
+    printf(" }\n");
+
+    printf("FOLLOW(B) = { ");
+    for (int i = 0; i < countB; i++) {
+        printf("%c", followB[i]);
+        if (i < countB - 1)
+            printf(", ");
+    }
+    printf(" }\n");
+
+    return 0;
+}
