@@ -1,0 +1,9 @@
+1 a int
+1 b float
+1 sum int
+1 a char
+3
+2 b
+2 z
+4 b
+3
