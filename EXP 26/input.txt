@@ -1,0 +1,6 @@
+student123@saveetha.com
+john.doe@gmail.co.in
+user@@gmail.com
+abc.gmail.com
+name@domain
+test_user@simats.edu
