@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+    int i, sum = 0;
+    float avg = 2.5;
+    for (i = 1; i <= 5; i++)
+        sum = sum + i;
+    printf("Sum = %d", sum);
+    return 0;
+}
