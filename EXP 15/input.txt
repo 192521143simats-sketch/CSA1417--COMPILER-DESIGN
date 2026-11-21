@@ -1,0 +1,3 @@
+Compiler design is the study of translators.
+A lexical analyzer scans the source program.
+It produces a stream of tokens.
