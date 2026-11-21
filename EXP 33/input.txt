@@ -1,0 +1,6 @@
+https://www.saveetha.com
+http://simats.edu/courses/cs?id=14
+ftp://files.example.org/data
+www.google.com
+https:/example.com
+http://invalid_url
